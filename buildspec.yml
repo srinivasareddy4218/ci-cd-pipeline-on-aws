@@ -7,7 +7,7 @@ phases:
       
   build:
     commands:
-      - echo "Syncing ./src to s3://$WEBSITE_BUCKET"
-      - aws s3 sync "./src" "s3://$WEBSITE_BUCKET"
+      - echo "Syncing ./src to s3://ci-cd-sample"
+      - aws s3 sync "./src" "s3://ci-cd-sample"
     finally:
       - echo "Build phase completed `date`"
